@@ -20,7 +20,7 @@ namespace APIVerve.Examples
         private static readonly string API_URL = "https://api.apiverve.com/v1/webscreenshots";
 
         /// <summary>
-        /// Make a POST request to the Website Screenshot API
+        /// Make a GET request to the Website Screenshot API
         /// </summary>
         static async Task<JsonDocument> CallWebsiteScreenshotAPI()
         {
@@ -29,13 +29,7 @@ namespace APIVerve.Examples
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                // Request body
-                var requestBody &#x3D; new { url &#x3D; &quot;https://ebay.com/&quot;, type &#x3D; &quot;png&quot;, width &#x3D; 1024, height &#x3D; 600, fullpage &#x3D; false };
-
-                var jsonContent = JsonSerializer.Serialize(requestBody);
-                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-                var response = await client.PostAsync(API_URL, content);
+                var response = await client.GetAsync(API_URL);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
