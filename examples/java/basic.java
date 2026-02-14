@@ -12,16 +12,8 @@ public class BasicExample {
         WebsiteScreenshotAPIClient client = new WebsiteScreenshotAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Request body
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;url&quot;, &quot;https://ebay.com/&quot;);
-        parameters.put(&quot;type&quot;, &quot;png&quot;);
-        parameters.put(&quot;width&quot;, 1024);
-        parameters.put(&quot;height&quot;, 600);
-        parameters.put(&quot;fullpage&quot;, false);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
