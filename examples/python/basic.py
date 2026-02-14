@@ -14,24 +14,14 @@ API_URL = 'https://api.apiverve.com/v1/webscreenshots'
 
 def call_webscreenshots_api():
     """
-    Make a POST request to the Website Screenshot API
+    Make a GET request to the Website Screenshot API
     """
     try:
-        # Request body
-        request_body &#x3D; {
-    &#x27;url&#x27;: &#x27;https://ebay.com/&#x27;,
-    &#x27;type&#x27;: &#x27;png&#x27;,
-    &#x27;width&#x27;: 1024,
-    &#x27;height&#x27;: 600,
-    &#x27;fullpage&#x27;: false
-}
-
         headers = {
-            'x-api-key': API_KEY,
-            'Content-Type': 'application/json'
+            'x-api-key': API_KEY
         }
 
-        response = requests.post(API_URL, headers=headers, json=request_body)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
