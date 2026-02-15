@@ -1,1 +1,3 @@
-from .apiClient import WebscreenshotsAPIClient
+from .apiClient import WebscreenshotsAPIClient, WebscreenshotsAPIClientError
+
+__all__ = ['WebscreenshotsAPIClient', 'WebscreenshotsAPIClientError']
