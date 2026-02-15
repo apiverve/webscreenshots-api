@@ -1,0 +1,121 @@
+# Website Screenshot API - Go Client
+
+Web Screenshots is a simple tool for capturing screenshots of web pages. It returns an image screenshot of the web page provided.
+
+![Build Status](https://img.shields.io/badge/build-passing-green)
+![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
+![Prod Ready](https://img.shields.io/badge/production-ready-blue)
+
+This is a Go client for the [Website Screenshot API](https://webscreenshots.apiverve.com?utm_source=go&utm_medium=readme)
+
+---
+
+## Installation
+
+```bash
+go get github.com/apiverve/webscreenshots-api/go
+```
+
+---
+
+## Configuration
+
+Before using the Website Screenshot API client, you need to obtain your API key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=go&utm_medium=readme)
+
+---
+
+## Quick Start
+
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=go&utm_medium=readme)
+
+The Website Screenshot API documentation is found here: [https://docs.apiverve.com/ref/webscreenshots](https://docs.apiverve.com/ref/webscreenshots?utm_source=go&utm_medium=readme)
+
+---
+
+## Usage
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+
+    "github.com/apiverve/webscreenshots-api/go"
+)
+
+func main() {
+    // Create a new client
+    client := webscreenshots.NewClient("YOUR_API_KEY")
+
+    // Set up parameters
+    params := map[string]interface{}{
+        "url": "https://ebay.com/",
+        "type": "png",
+        "width": 1024,
+        "height": 600,
+        "fullpage": false
+    }
+
+    // Make the request
+    response, err := client.Execute(params)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    fmt.Printf("Status: %s\n", response.Status)
+    fmt.Printf("Data: %+v\n", response.Data)
+}
+```
+
+---
+
+## Example Response
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "width": 1024,
+    "height": 600,
+    "scaleFactor": 1,
+    "imageName": "78bdb087-756b-4107-83e1-82fd40171ed1.png",
+    "expires": 1725356395837,
+    "url": "https://ebay.com/",
+    "downloadURL": "https://storage.googleapis.com/apiverve-helpers.appspot.com/webscreenshots/78bdb087-756b-4107-83e1-82fd40171ed1.png?GoogleAccessId=1089020767582-compute%40developer.gserviceaccount.com&Expires=1725356395&Signature=jqAuoBhrbsSqs61blsFdnXEU35QOanhFnL0FN2d82cDDTXAUWonuRURUjyyhmABe02dVD3sMpvQDh0V39ROFcukPFASdIhr4HdWnKl743JLx03jrW%2FJ2baK3lZCZemPkS%2F61VqcHV1YB5XsxqsDNNkQ8QL8xlzUslHUgjuVKsorDCpBL5iFPSLo0l5DO3wvZ6UudJJP11j1MAnRmWQC7%2FkUBc7AP4akQvm6N7lftFkx8z6%2FptdxBt60w1XR6Ixoy6Vl31tvd6UjyWhjmF8JbujRSRYXmh0vjTNZBp5BX7xUntQUSMXhQf%2Bj3bXq7ZcsfMAAtqonqbzC6SBZgzSu2kA%3D%3D"
+  }
+}
+```
+
+---
+
+## Customer Support
+
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=go&utm_medium=readme).
+
+---
+
+## Updates
+
+Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
+
+---
+
+## Legal
+
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=go&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=go&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=go&utm_medium=readme).
+
+---
+
+## License
+Licensed under the The MIT License (MIT)
+
+Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
