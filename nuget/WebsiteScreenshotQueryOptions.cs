@@ -17,7 +17,7 @@ namespace APIVerve.API.WebsiteScreenshot
         public string Url { get; set; }
 
         /// <summary>
-        /// The type of the screenshot (png, jpeg, or webp)
+        /// The image format for the screenshot
         /// </summary>
         [JsonProperty("type")]
         public string Type { get; set; }
