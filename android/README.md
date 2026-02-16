@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:webscreenshots-api:1.1.13'
+    implementation 'com.github.apiverve:webscreenshots-api:1.1.14'
 }
 ```
 
@@ -47,11 +47,11 @@ WebsiteScreenshotAPIClient client = new WebsiteScreenshotAPIClient("YOUR_API_KEY
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("url", "");
+    parameters.put("url", "https://ebay.com/");
     parameters.put("type", "png");
-    parameters.put("width", 1920);
-    parameters.put("height", 1080);
-    parameters.put("fullpage", true);
+    parameters.put("width", 1024);
+    parameters.put("height", 600);
+    parameters.put("fullpage", false);
 
     // Execute the request
     APIResponse response = client.execute(parameters);
