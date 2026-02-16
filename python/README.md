@@ -44,7 +44,13 @@ from apiverve_websitescreenshot.apiClient import WebscreenshotsAPIClient
 # Initialize the client with your APIVerve API key
 api = WebscreenshotsAPIClient("[YOUR_API_KEY]")
 
-query = { "url": "https://ebay.com/", "type": "png", "width": 1024, "height": 600, "fullpage": false }
+query = {
+    "url": "https://ebay.com/",
+    "type": "png",
+    "width": 1024,
+    "height": 600,
+    "fullpage": false
+}
 
 try:
     # Make the API call
@@ -82,7 +88,13 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "url": "https://ebay.com/", "type": "png", "width": 1024, "height": 600, "fullpage": false }
+query = {
+    "url": "https://ebay.com/",
+    "type": "png",
+    "width": 1024,
+    "height": 600,
+    "fullpage": false
+}
 ```
 
 ###### Simple Request
@@ -126,7 +138,13 @@ from apiverve_websitescreenshot.apiClient import WebscreenshotsAPIClient, Webscr
 
 api = WebscreenshotsAPIClient("[YOUR_API_KEY]")
 
-query = { "url": "https://ebay.com/", "type": "png", "width": 1024, "height": 600, "fullpage": false }
+query = {
+    "url": "https://ebay.com/",
+    "type": "png",
+    "width": 1024,
+    "height": 600,
+    "fullpage": false
+}
 
 try:
     result = api.execute(query)
@@ -147,7 +165,13 @@ from apiverve_websitescreenshot.apiClient import WebscreenshotsAPIClient, Webscr
 
 api = WebscreenshotsAPIClient("[YOUR_API_KEY]")
 
-query = { "url": "https://ebay.com/", "type": "png", "width": 1024, "height": 600, "fullpage": false }
+query = {
+    "url": "https://ebay.com/",
+    "type": "png",
+    "width": 1024,
+    "height": 600,
+    "fullpage": false
+}
 
 try:
     result = api.execute(query)
@@ -181,7 +205,13 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_websitescreenshot.apiClient import WebscreenshotsAPIClient, WebscreenshotsAPIClientError
 
-query = { "url": "https://ebay.com/", "type": "png", "width": 1024, "height": 600, "fullpage": false }
+query = {
+    "url": "https://ebay.com/",
+    "type": "png",
+    "width": 1024,
+    "height": 600,
+    "fullpage": false
+}
 
 # Using context manager ensures proper cleanup
 with WebscreenshotsAPIClient("[YOUR_API_KEY]") as api:
@@ -207,7 +237,13 @@ from apiverve_websitescreenshot.apiClient import WebscreenshotsAPIClient
 # Enable debug mode
 api = WebscreenshotsAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "url": "https://ebay.com/", "type": "png", "width": 1024, "height": 600, "fullpage": false }
+query = {
+    "url": "https://ebay.com/",
+    "type": "png",
+    "width": 1024,
+    "height": 600,
+    "fullpage": false
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -222,8 +258,15 @@ from apiverve_websitescreenshot.apiClient import WebscreenshotsAPIClient
 
 api = WebscreenshotsAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "url": "https://ebay.com/",
+    "type": "png",
+    "width": 1024,
+    "height": 600,
+    "fullpage": false
+}
+
 try:
-    query = { "url": "https://ebay.com/", "type": "png", "width": 1024, "height": 600, "fullpage": false }
     result = api.execute(query)
     print(result)
 finally:
