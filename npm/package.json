@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/webscreenshots",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Website Screenshot renders webpage screenshots from any URL into PNG, JPEG, or WebP format. It returns a signed download link with an expiration timestamp, supporting custom viewport dimensions up to 3840 pixels wide.",
   "main": "index.js",
   "types": "index.d.ts",
