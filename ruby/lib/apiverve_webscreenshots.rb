@@ -4,6 +4,6 @@ require_relative "apiverve_webscreenshots/client"
 
 module APIVerve
   module Webscreenshots
-    VERSION = "1.2.3"
+    VERSION = "1.2.4"
   end
 end
