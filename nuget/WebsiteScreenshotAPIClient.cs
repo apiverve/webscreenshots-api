@@ -71,7 +71,11 @@ namespace APIVerve.API.WebsiteScreenshot
             { "type", new ValidationRule { Type = "string", Required = false } },
             { "width", new ValidationRule { Type = "number", Required = false, Min = 100, Max = 3840 } },
             { "height", new ValidationRule { Type = "number", Required = false, Min = 100, Max = 3840 } },
-            { "fullpage", new ValidationRule { Type = "boolean", Required = false } }
+            { "fullpage", new ValidationRule { Type = "boolean", Required = false } },
+            { "selector", new ValidationRule { Type = "string", Required = false, MaxLength = 200 } },
+            { "delay", new ValidationRule { Type = "number", Required = false, Min = 0, Max = 5000 } },
+            { "waituntil", new ValidationRule { Type = "string", Required = false } },
+            { "quality", new ValidationRule { Type = "number", Required = false, Min = 1, Max = 100 } }
         };
 
         /// <summary>Format validation patterns</summary>
