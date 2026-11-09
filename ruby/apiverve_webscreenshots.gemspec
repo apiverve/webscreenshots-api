@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "apiverve_webscreenshots"
-  spec.version       = "1.2.4"
+  spec.version       = "1.2.5"
   spec.authors       = ["APIVerve"]
   spec.email         = ["hello@apiverve.com"]
 
   spec.summary       = "Website Screenshot API - Ruby Client"
-  spec.description   = "Website Screenshot renders webpage screenshots from any URL into PNG, JPEG, or WebP format. It returns a signed download link with an expiration timestamp, supporting custom viewport dimensions up to 3840 pixels wide."
+  spec.description   = "Website Screenshot renders webpage screenshots from any URL as PNG, JPEG or WebP, with ads blocked and cookie notices dismissed. It returns a signed download link with an expiration timestamp, supporting custom viewport dimensions up to 3840 pixels wide, single-element capture by CSS selector, a capture delay, a page-load wait strategy and JPEG or WebP quality."
   spec.homepage      = "https://apiverve.com/marketplace/webscreenshots?utm_source=ruby&utm_medium=referral&utm_content=homepage"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
