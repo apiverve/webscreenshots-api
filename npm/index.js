@@ -30,7 +30,7 @@ class webscreenshotsWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/webscreenshots';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"url":{"type":"string","required":true,"format":"url"},"type":{"type":"string","required":false,"default":"png"},"width":{"type":"number","required":false,"min":100,"max":3840,"default":"1920"},"height":{"type":"number","required":false,"min":100,"max":3840,"default":"1080"},"fullpage":{"type":"boolean","required":false,"default":false}};
+        this.validationRules = {"url":{"type":"string","required":true,"format":"url"},"type":{"type":"string","required":false,"default":"png"},"width":{"type":"number","required":false,"min":100,"max":3840,"default":"1920"},"height":{"type":"number","required":false,"min":100,"max":3840,"default":"1080"},"fullpage":{"type":"boolean","required":false,"default":false},"selector":{"type":"string","required":false,"maxLength":200},"delay":{"type":"number","required":false,"min":0,"max":5000},"waituntil":{"type":"string","required":false,"default":"domcontentloaded"},"quality":{"type":"number","required":false,"min":1,"max":100}};
     }
 
     /**
