@@ -2,9 +2,11 @@ openapi: 3.0.4
 info:
   title: Website Screenshot
   description: >-
-    Website Screenshot renders webpage screenshots from any URL into PNG, JPEG,
-    or WebP format. It returns a signed download link with an expiration
-    timestamp, supporting custom viewport dimensions up to 3840 pixels wide.
+    Website Screenshot renders webpage screenshots from any URL as PNG, JPEG or
+    WebP, with ads blocked and cookie notices dismissed. It returns a signed
+    download link with an expiration timestamp, supporting custom viewport
+    dimensions up to 3840 pixels wide, single-element capture by CSS selector, a
+    capture delay, a page-load wait strategy and JPEG or WebP quality.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -20,7 +22,9 @@ paths:
   /v1/webscreenshots:
     post:
       summary: Website Screenshot
-      description: Capture a screenshot of a web page
+      description: >-
+        Capture a screenshot of a web page, or of one element on it by CSS
+        selector, after an optional delay or page-load wait
       operationId: webscreenshots
       parameters: []
       responses:
@@ -85,6 +89,29 @@ paths:
                 fullpage:
                   type: boolean
                   description: Whether to capture the full page screenshot (true or false)
+                selector:
+                  type: string
+                  description: >-
+                    CSS selector of a single element to capture instead of the
+                    viewport (e.g., #pricing). The first match is captured; a
+                    selector that matches nothing returns 400
+                delay:
+                  type: number
+                  description: >-
+                    Milliseconds to wait after the page loads before capturing,
+                    for animations or late content. Between 0 and 5000
+                waituntil:
+                  type: string
+                  description: >-
+                    When navigation counts as finished before capture:
+                    domcontentloaded (default, fastest), load (all resources),
+                    or networkidle (network quiet). A page that never settles is
+                    captured as parsed
+                quality:
+                  type: number
+                  description: >-
+                    Compression quality from 1 to 100. Applies only when type is
+                    jpeg or webp
               required:
                 - url
 components:

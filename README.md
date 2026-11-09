@@ -1,6 +1,6 @@
 # [Website Screenshot API](https://apiverve.com/marketplace/webscreenshots?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Website Screenshot renders webpage screenshots from any URL into PNG, JPEG, or WebP format. It returns a signed download link with an expiration timestamp, supporting custom viewport dimensions up to 3840 pixels wide.
+Website Screenshot renders webpage screenshots from any URL as PNG, JPEG or WebP, with ads blocked and cookie notices dismissed. It returns a signed download link with an expiration timestamp, supporting custom viewport dimensions up to 3840 pixels wide, single-element capture by CSS selector, a capture delay, a page-load wait strategy and JPEG or WebP quality.
 
 The Website Screenshot API provides a simple, reliable way to integrate website screenshot functionality into your applications. Built for developers who need production-ready website screenshot capabilities without the complexity of building from scratch.
 
