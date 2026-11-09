@@ -38,7 +38,11 @@ class Client
         'type' => ['type' => 'string', 'required' => false],
         'width' => ['type' => 'number', 'required' => false, 'min' => 100, 'max' => 3840],
         'height' => ['type' => 'number', 'required' => false, 'min' => 100, 'max' => 3840],
-        'fullpage' => ['type' => 'boolean', 'required' => false]
+        'fullpage' => ['type' => 'boolean', 'required' => false],
+        'selector' => ['type' => 'string', 'required' => false, 'maxLength' => 200],
+        'delay' => ['type' => 'number', 'required' => false, 'min' => 0, 'max' => 5000],
+        'waituntil' => ['type' => 'string', 'required' => false],
+        'quality' => ['type' => 'number', 'required' => false, 'min' => 1, 'max' => 100]
     ];
 
     /**
