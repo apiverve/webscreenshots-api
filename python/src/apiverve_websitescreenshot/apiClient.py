@@ -28,7 +28,11 @@ class WebscreenshotsAPIClient:
         "type": {"type": "string", "required": False, "default": "png"},
         "width": {"type": "number", "required": False, "min": 100, "max": 3840, "default": "1920"},
         "height": {"type": "number", "required": False, "min": 100, "max": 3840, "default": "1080"},
-        "fullpage": {"type": "boolean", "required": False, "default": False}
+        "fullpage": {"type": "boolean", "required": False, "default": False},
+        "selector": {"type": "string", "required": False, "maxLength": 200},
+        "delay": {"type": "number", "required": False, "min": 0, "max": 5000},
+        "waituntil": {"type": "string", "required": False, "default": "domcontentloaded"},
+        "quality": {"type": "number", "required": False, "min": 1, "max": 100}
     }
 
     # Format validation patterns

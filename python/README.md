@@ -1,7 +1,7 @@
 Website Screenshot API
 ============
 
-Website Screenshot renders webpage screenshots from any URL into PNG, JPEG, or WebP format. It returns a signed download link with an expiration timestamp, supporting custom viewport dimensions up to 3840 pixels wide.
+Website Screenshot renders webpage screenshots from any URL as PNG, JPEG or WebP, with ads blocked and cookie notices dismissed. It returns a signed download link with an expiration timestamp, supporting custom viewport dimensions up to 3840 pixels wide, single-element capture by CSS selector, a capture delay, a page-load wait strategy and JPEG or WebP quality.
 
 
 [![PyPI version](https://img.shields.io/pypi/v/apiverve-websitescreenshot.svg)](https://pypi.org/project/apiverve-websitescreenshot/)
